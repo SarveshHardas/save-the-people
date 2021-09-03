@@ -11,7 +11,6 @@ var score = 0;
 function preload()
 {
   bg = loadImage("1035.jpg");
-  snd = loadSound("cheering.mp3");
 }
 
 function setup() {
@@ -65,8 +64,6 @@ function collide(foodBasket,bodyB)
          var d = dist(foodBasket.body.position.x,foodBasket.body.position.y,bodyB.body.position.x,bodyB.body.position.y);
           if(d<=80)
             {
-              console.log("collided")
-               snd.play();
                score=+5;
                foodBasket=null;
                return true; 
